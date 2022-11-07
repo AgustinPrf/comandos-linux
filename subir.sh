@@ -7,9 +7,21 @@ echo "--------------------------------------------------------------------------
 echo "       Actulizado del proyecto"
 echo "-------------------------------------------------------------------------------"
 git pull origin gh-pages
+
+
+echo "-------------------------------------------------------------------------------"
+echo "     BUILD y COPIAMOS el proyecto "
+echo "-------------------------------------------------------------------------------"
+
+cd /home/agustin/Docencia/2022-2023/ISO/ISO-AAM-2023/pagina
+mkdocs build
+cd /home/agustin/Docencia/2022-2023/ISO/comandos-linux
+cp -r /home/agustin/Docencia/2022-2023/ISO/ISO-AAM-2023/pagina/site/* /home/agustin/Docencia/2022-2023/ISO/comandos-linux/
+
 echo "-------------------------------------------------------------------------------"
 echo "       Estado del proyecto"
 echo "-------------------------------------------------------------------------------"
+
 git status
 
 echo "-------------------------------------------------------------------------------"

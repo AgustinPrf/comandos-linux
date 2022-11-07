@@ -335,6 +335,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    FIND
+  </a>
+  
+    <nav class="md-nav" aria-label="FIND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones_3" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acciones" class="md-nav__link">
+    Acciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_4" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -480,6 +514,40 @@
         
           <li class="md-nav__item">
   <a href="#ejemplos_3" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    FIND
+  </a>
+  
+    <nav class="md-nav" aria-label="FIND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones_3" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acciones" class="md-nav__link">
+    Acciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_4" class="md-nav__link">
     Ejemplos
   </a>
   
@@ -666,18 +734,133 @@
 <h4 id="ejemplos_3"><strong><span style="color:#008F39">Ejemplos</span></strong></h4>
 <div class="highlight"><pre><span></span><code>     grep unix01 /etc/passwd
      grep unix0<span class="o">[</span><span class="m">1</span>-9<span class="o">]</span> /etc/passwd
-     grep <span class="s1">&#39;^c&#39;</span> misDatos.txt         //Líneas que empiecen por la letra c en el archivo misDatos.txt
-     grep <span class="s1">&#39;^[^c]&#39;</span> misDatos.txt      //Líneas que NO comiencen por la letra c en el archivo
-     grep <span class="s1">&#39;^[^c]&#39;</span> misDatos.txt      //Tercer campo tiene una sola cifra
-     grep –v bash$ /etc/passwd      //Mostrar las cuentas de usuario que NO utilicen bash
-     ls -l /usr <span class="p">|</span> grep <span class="s1">&#39;^d&#39;</span>         //Lista subdirectorios de /usr <span class="o">(</span>que empiezan con <span class="s1">&#39;d&#39;</span><span class="o">)</span> 
-     ls -l / <span class="p">|</span> grep <span class="s1">&#39;.......rw&#39;</span>     //Listar archivos que otros pueden leer y escribir 
-     grep <span class="s1">&#39;^[^:]*::&#39;</span> /etc/passwd    //Buscar usuarios sin contraseña
+     grep <span class="s1">&#39;^c&#39;</span> misDatos.txt         // Líneas que empiecen por la letra c en el archivo misDatos.txt
+     grep <span class="s1">&#39;^[^c]&#39;</span> misDatos.txt      // Líneas que NO comiencen por la letra c en el archivo
+     grep <span class="s1">&#39;^[^c]&#39;</span> misDatos.txt      // Tercer campo tiene una sola cifra
+     grep –v bash$ /etc/passwd      // Mostrar las cuentas de usuario que NO utilicen bash
+     ls -l /usr <span class="p">|</span> grep <span class="s1">&#39;^d&#39;</span>         // Lista subdirectorios de /usr <span class="o">(</span>que empiezan con <span class="s1">&#39;d&#39;</span><span class="o">)</span> 
+     ls -l / <span class="p">|</span> grep <span class="s1">&#39;.......rw&#39;</span>     // Listar archivos que otros pueden leer y escribir 
+     grep <span class="s1">&#39;^[^:]*::&#39;</span> /etc/passwd    // Buscar usuarios sin contraseña
      grep <span class="s1">&#39;^[^:]*:\*:&#39;</span> /etc/passwd  // Usuarios que no pueden entrar al sistema
      grep ‘^d’ fichero              // Líneas que empiecen por d en el fichero .
      grep ‘^<span class="o">[</span>^d<span class="o">]</span>’ fichero           // Líneas que no comienzan por d en el fichero 
      grep –v ‘^C’ fich1 &gt; fich2     // Quita las líneas de fich1 que comienzan por C y copio en fich2
      grep -E <span class="s1">&#39;:[0-9]{1,3}:&#39;</span> /etc/passwd     // Lineas que tengan de <span class="m">1</span> a <span class="m">3</span> dígitos en alguno de sus campos entre “:”
+</code></pre></div>
+<h2 id="find"><span class="ag-titulo">FIND</span></h2>
+<p>El comando <strong>find</strong> se utiliza para buscar el archivo dentro de una rama de directorios. Su estructura es la siguiente:</p>
+<p><em><center style="color:#ccadc4">find [ruta] expresion </center></em></p>
+<h4 id="opciones_3"><strong><span style="color:#2980B9">Opciones</span></strong></h4>
+<table>
+<thead>
+<tr>
+<th align="center">Opciones</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>maxdepth</strong></td>
+<td align="left"><em>Busca de forma recursiva hasta un máximo de N niveles de subdirectorios por debajo del especificado.</em><br /> - <em>con -maxdepth 1 se busca en el directorio</em> <br /> - <em>Por defecto se busca en todos los subdirectorios</em></td>
+</tr>
+<tr>
+<td align="center"><strong>print</strong></td>
+<td align="left"><em>Visualiza el camino</em></td>
+</tr>
+<tr>
+<td align="center"><strong>name</strong></td>
+<td align="left"><em>Debe coincidir con el nombre</em></td>
+</tr>
+<tr>
+<td align="center"><strong>iname</strong></td>
+<td align="left"><em>Debe coincidir con el nombre, pero ignorando mayúsculas</em></td>
+</tr>
+<tr>
+<td align="center"><strong>path</strong></td>
+<td align="left"><em>Nombre con ruta completa</em></td>
+</tr>
+<tr>
+<td align="center"><strong>type</strong></td>
+<td align="left"><em>Tipo de fichero a buscar:</em><br />- <strong><em>d</em></strong> <em>→ Directorio</em><br />-<strong><em>f</em></strong> <em>→ Fichero regular</em><br />-<strong><em>l</em></strong> <em>→ Enlace simbólico</em><br />-<strong><em>b</em></strong> <em>→ Fichero especial de bloques</em><br />-<strong><em>c</em></strong> <em>→ Fichero especial de carácteres</em></td>
+</tr>
+<tr>
+<td align="center"><strong>size</strong></td>
+<td align="left"><em>Con el numero de bloques de tamaño</em>:<br /><em>+ , - , sin_signo</em><br /><em>Tamaño de N unidades de espacio. Las unidades de espacio pueden ser:</em><br />- <strong><em>b</em></strong> <em>→ bloques de 512 bytes</em><br />- <strong><em>c</em></strong> <em>→ bytes</em><br />- <strong><em>w</em></strong> <em>→ palabras (2 bytes) )</em><br />- <strong><em>k</em></strong> <em>→ KB</em><br />- <strong><em>M</em></strong> <em>→ MB</em><br />- <strong><em>G</em></strong> <em>→ GB</em></td>
+</tr>
+<tr>
+<td align="center"><strong>empty</strong></td>
+<td align="left"><em>Archivo vacío (regular o directorio)</em></td>
+</tr>
+<tr>
+<td align="center"><strong>user</strong></td>
+<td align="left"><em>Ficheros propiedad del usuario</em></td>
+</tr>
+<tr>
+<td align="center"><strong>group</strong></td>
+<td align="left"><em>Ficheros que pertenecen al grupo</em></td>
+</tr>
+<tr>
+<td align="center"><strong>uid</strong></td>
+<td align="left"><em>Archivo del usuario con UID</em></td>
+</tr>
+<tr>
+<td align="center"><strong>gid</strong></td>
+<td align="left"><em>Archivo del grupo con GID</em></td>
+</tr>
+<tr>
+<td align="center"><strong>atime</strong></td>
+<td align="left"><em>Tiempo transcurrido desde el último</em> <strong><em>acceso</em></strong> <em>(N*24 horas atrás)</em><br /><em>+, - , sin_signo</em></td>
+</tr>
+<tr>
+<td align="center"><strong>ctime</strong></td>
+<td align="left"><em>Tiempo transcurrido desde la última</em> <strong><em>cambio</em></strong> <em>de estado(N*24 horas atrás)</em><br /><em>+ → mayores que el valor</em><br /><em>- → menores que el valor</em><br /><em>sin signo     → Exactamente el valor</em></td>
+</tr>
+<tr>
+<td align="center"><strong>mtime</strong></td>
+<td align="left"><em>Tiempo transcurrido desde la última</em> <strong><em>modificación</em></strong> <em>del archivo(N*24 horas atrás)</em><br /> <em>+ , - , sin signo</em></td>
+</tr>
+<tr>
+<td align="center"><strong>amin</strong></td>
+<td align="left"><em>Tiempo transcurrido desde el último</em> <strong><em>acceso</em></strong> <em>(N minutos atrás)</em><br /><em>+, - , sin_signo</em></td>
+</tr>
+<tr>
+<td align="center"><strong>cmin</strong></td>
+<td align="left"><em>Tiempo transcurrido desde la última</em> <strong><em>cambio</em></strong> <em>de estado( N minutos atrás)</em><br /> <em>+ , - , sin signo</em></td>
+</tr>
+<tr>
+<td align="center"><strong>mmin</strong></td>
+<td align="left"><em>Tiempo transcurrido desde la última</em> <strong><em>modificación</em></strong> <em>del archivo( N minutos atrás)</em><br /> <em>+ , - , sin signo</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="acciones"><strong><span style="color:#2980B9">Acciones</span></strong></h4>
+<table>
+<thead>
+<tr>
+<th align="center">Opciones</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>-exec</strong> COMANDO *<em>{} *</em></td>
+<td><em>Ejecuta COMANDO sobre los archivos encontrados</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplos_4"><strong><span style="color:#008F39">Ejemplos</span></strong></h4>
+<div class="highlight"><pre><span></span><code>     find /home  -name buscame -print
+     find /home -size +100 -print           // Fichero con tamaño superior a <span class="m">100</span> bloques 
+     find / -size +100M                     // Fichero con tamaño mayor a 100MB
+     find / -mtime -7                       // Fichero modificados la última semana 
+     find /var/tmp -empty -exec rm <span class="o">{}</span> <span class="se">\;</span>    // Busca archivos vacíos y los borra. find seguridad 
+     find -name <span class="s2">&quot;*.txt&quot;</span> -exec cat <span class="o">{}</span> <span class="se">\;</span>     // Muestra todos los archivos del directorio
+     find /home/preparador –name <span class="s2">&quot;*.txt&quot;</span>    // Archivos .txt del directorio
+     find /home/preparador –name <span class="s2">&quot;*.c&quot;</span> –size +100K      // Archivos con extensión.c y tamaño mayor a 100KB
+     find /home/preparador –amin +2 –amin -6            // Archivos leídos entre <span class="m">2</span> y <span class="m">6</span> minutos atrás
+     find -type -d -mtime +10 –exec rm –r <span class="o">{}</span> <span class="se">\;</span>         // Borrar subdirectorios con antigüedad mayor de <span class="m">10</span> días<span class="p">;</span>
+
+     find / -name <span class="s2">&quot;*.mp3&quot;</span> –exec cp <span class="o">{}</span> /home/preparador/copiaMusica <span class="se">\;</span>
 </code></pre></div>
 
               
