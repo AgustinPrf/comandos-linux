@@ -369,6 +369,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cut" class="md-nav__link">
+    CUT
+  </a>
+  
+    <nav class="md-nav" aria-label="CUT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones_4" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_5" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    sort
+  </a>
+  
+    <nav class="md-nav" aria-label="sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones_5" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_6" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -548,6 +602,60 @@
         
           <li class="md-nav__item">
   <a href="#ejemplos_4" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cut" class="md-nav__link">
+    CUT
+  </a>
+  
+    <nav class="md-nav" aria-label="CUT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones_4" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_5" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    sort
+  </a>
+  
+    <nav class="md-nav" aria-label="sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones_5" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_6" class="md-nav__link">
     Ejemplos
   </a>
   
@@ -863,6 +971,87 @@
      find -type -d -mtime +10 –exec rm –r <span class="o">{}</span> <span class="se">\;</span>         // Borrar subdirectorios con antigüedad mayor de <span class="m">10</span> días<span class="p">;</span>
 
      find / -name <span class="s2">&quot;*.mp3&quot;</span> –exec cp <span class="o">{}</span> /home/preparador/copiaMusica <span class="se">\;</span>
+</code></pre></div>
+<hr>
+
+<h2 id="cut"><span class="ag-titulo">CUT</span></h2>
+<p>El comando <strong>cut</strong> se utiliza para poder cortar caracteres y campos, con la posibilidad de usar delimitadores y otras opciones, para extraer las partes seleccionadas.</p>
+<p><em><center style="color:#ccadc4">cut [opcion] [fichero] </center></em></p>
+<h4 id="opciones_4"><span class="ag-ejemplos-opciones">Opciones</span></h4>
+<table>
+<thead>
+<tr>
+<th align="center">Opciones</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>d</strong></td>
+<td align="left"><em>Delimitador a utilizar</em></td>
+</tr>
+<tr>
+<td align="center"><strong>f</strong></td>
+<td align="left"><em>Seleccionar los campos indicados</em></td>
+</tr>
+<tr>
+<td align="center"><strong>c</strong></td>
+<td align="left"><em>Seleccionar caracteres por línea</em></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="left"><em>Seleccionar bytes por línea</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplos_5"><span class="ag-ejemplos-opciones">Ejemplos</span></h4>
+<div class="highlight"><pre><span></span><code>    <span class="nb">echo</span> “foo,bar,baz,stuff,blah,oogabooga” <span class="p">|</span> cut -d<span class="s1">&#39;,&#39;</span> -f <span class="m">3</span>,6  // El resultado sería: baz,oogabooga
+    cut –c-4 /etc/passwd                        // primeros <span class="m">4</span> caracteres de cada línea
+    cut –d: -f1,4 /etc/passwd                   // primer y cuarto campo 
+</code></pre></div>
+<hr>
+
+<h2 id="sort"><span class="ag-titulo">sort</span></h2>
+<p>El comando <strong>sort</strong> se utiliza para ordenar las lineas de un fichero</p>
+<p><em><center style="color:#ccadc4">sort [opcion] [fichero] </center></em></p>
+<h4 id="opciones_5"><span class="ag-ejemplos-opciones">Opciones</span></h4>
+<table>
+<thead>
+<tr>
+<th align="center">Opciones</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>t</strong></td>
+<td align="left"><em>Especificar separador</em></td>
+</tr>
+<tr>
+<td align="center"><strong>k</strong></td>
+<td align="left"><em>Ordenar especificando posiciones     -kc₁.d₁ , c₂.d₂</em>  <br /><strong><em>c</em><em> → numero de campo</em><br /></strong><em>d</em><em> → dígito dentro del campo</em></td>
+</tr>
+<tr>
+<td align="center"><strong>u</strong></td>
+<td align="left"><em>Eliminar filas repetidas (unique)</em></td>
+</tr>
+<tr>
+<td align="center"><strong>f</strong></td>
+<td align="left"><em>Sin distinción entre mayúsculas y minúsculas.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplos_6"><span class="ag-ejemplos-opciones">Ejemplos</span></h4>
+<div class="highlight"><pre><span></span><code>    sort arch1                  // Ordena archivo por orden alfabético
+    sort -n arch2.num           // Ordena numéricamente.
+    sort -k2 -t, alumnos.txt    // Ordenar alumnos por el segundo campo <span class="o">(</span>delimitador ,<span class="o">)</span>
+
+    sort -t: -k1,3 f1.txt       // Ordena por los campos <span class="m">1</span> y <span class="m">3</span>   
+    sort -t: -k1.3,3.5 f1.txt   // Ordena desde el 3er. carácter del campo <span class="m">1</span> hasta el 5to. Carácter del campo <span class="m">3</span>.
+    sort -nr f2.num             // Ordena en orden numérico descendente. 
+
+    sort -k3 f3.txt             // Ordena alfabéticamente por 3er. campo. los campos se delimitan por blancos<span class="o">(</span>espacio o tabulador<span class="o">)</span>.
+    ls –l <span class="p">|</span> sort –nr –k5        // Ordenado de mayor a menor por tamaño de archivo
 </code></pre></div>
 
               
