@@ -1,0 +1,29 @@
+hr{
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #2980B9, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #2980B9, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #2980B9, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #2980B9, #f0f0f0); 
+}
+
+span.ag-titulo{
+	font-family: Arial black;
+	font-weight: bold;	
+	background: #2980B9;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.4), 0px -1px 1px rgba(0,0,0,0.3);
+}
+
+span.ag-subtitulo{
+	font-family: Arial black;
+	font-weight: bold;	
+	font-size: 25px;
+	background: #2980B9;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.4), 0px -1px 1px rgba(0,0,0,0.3);
+}
