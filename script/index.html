@@ -680,7 +680,7 @@ Pero a partir del 10 hay que encerrarlo entre llaves, ej. ${11}</p>
     <span class="k">fi</span>
 </code></pre></div>
 <p>En caso de necesitar if anidados:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">if</span> condición
+<p><div class="highlight"><pre><span></span><code>    <span class="k">if</span> condición
     <span class="k">then</span>
         comando1
     <span class="k">elif</span> condición
@@ -689,6 +689,14 @@ Pero a partir del 10 hay que encerrarlo entre llaves, ej. ${11}</p>
     <span class="k">elif</span> condición
     <span class="k">then</span>
 
+    <span class="k">fi</span>
+</code></pre></div>
+<strong><span class="ag-ejemplos-opciones">Ejemplo</span></strong></p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="o">[</span> <span class="nv">$edad</span> -gt  <span class="m">18</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Eres mayor de edad&quot;</span>
+    <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s2">&quot;No eres mayor de edad&quot;</span>
     <span class="k">fi</span>
 </code></pre></div>
 <hr>
@@ -703,7 +711,23 @@ Pero a partir del 10 hay que encerrarlo entre llaves, ej. ${11}</p>
         *<span class="o">)</span> comandos 
         <span class="p">;;</span>
     <span class="k">esac</span>
-</code></pre></div></p>
+</code></pre></div>
+<strong><span class="ag-ejemplos-opciones">Ejemplo</span></strong></p>
+<div class="highlight"><pre><span></span><code>    <span class="k">case</span> <span class="nv">$frase</span> <span class="k">in</span>
+    a*<span class="o">)</span>
+         <span class="nb">echo</span> <span class="s2">&quot;La frase empieza con a&quot;</span>
+        <span class="p">;;</span>
+    c*t<span class="o">)</span>
+            <span class="nb">echo</span> <span class="s2">&quot;La frase empieza con c y termina con t&quot;</span>
+        <span class="p">;;</span>
+    *com<span class="o">)</span>
+            <span class="nb">echo</span> <span class="s2">&quot;La frase termina con la cadena com&quot;</span>
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+            <span class="nb">echo</span> <span class="s2">&quot;La frase no cumple con ninguna de las condiciones&quot;</span>
+        <span class="p">;;</span>
+    <span class="k">esac</span>
+</code></pre></div>
 <hr>
 
 <h4 id="for"><span class="ag-subtitulo">for</span></h4>
@@ -719,6 +743,20 @@ Pero a partir del 10 hay que encerrarlo entre llaves, ej. ${11}</p>
 <li><strong>Break</strong>: Rompe el bucle y no da más opción a que la variable se ejecute.</li>
 <li><strong>Continue</strong>: Salta al siguiente valor de la lista.</li>
 </ul>
+<p><strong><span class="ag-ejemplos-opciones">Ejemplo</span></strong></p>
+<div class="highlight"><pre><span></span><code>    <span class="nv">ciudades</span><span class="o">=</span><span class="s2">&quot;Madrid Barcelona Granada &quot;</span>
+
+    <span class="k">for</span> ciudad <span class="k">in</span> <span class="nv">$ciudades</span> 
+    <span class="k">do</span>
+      <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$ciudad</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s1">&#39;Granada&#39;</span> <span class="o">]]</span>
+      <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot; Mi tierra es </span><span class="nv">$ciudad</span><span class="s2"> !!! &quot;</span>
+      <span class="k">else</span>
+            <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$ciudad</span><span class="s2">, no es mi tierra&quot;</span>
+      <span class="k">fi</span>
+
+    <span class="k">done</span>
+</code></pre></div>
 <hr>
 
 <h4 id="while"><span class="ag-subtitulo">while</span></h4>
@@ -727,6 +765,15 @@ Pero a partir del 10 hay que encerrarlo entre llaves, ej. ${11}</p>
     <span class="k">do</span>
         comandos
     <span class="k">done</span>
+</code></pre></div>
+<p><strong><span class="ag-ejemplos-opciones">Ejemplo</span></strong><strong><span class="ag-ejemplos-opciones">Ejemplo</span></strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">i</span><span class="o">=</span><span class="m">100</span>
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$i</span> -lt <span class="m">1000</span> <span class="o">]</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Hola soy Bart Simpson, Escribiendo en la pizarra la frase nº </span><span class="nv">$i</span><span class="s2">&quot;</span>
+
+    <span class="o">((</span>i++<span class="o">))</span>
+<span class="k">done</span>
 </code></pre></div>
 <hr>
 
