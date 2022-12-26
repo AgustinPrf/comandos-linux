@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://agustin.com/</loc>
-         <lastmod>2022-11-27</lastmod>
+         <lastmod>2022-12-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agustin.com/aplicaciones/</loc>
+         <lastmod>2022-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agustin.com/directorios/</loc>
-         <lastmod>2022-11-27</lastmod>
+         <lastmod>2022-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agustin.com/script/</loc>
-         <lastmod>2022-11-27</lastmod>
+         <lastmod>2022-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
