@@ -377,6 +377,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ficheros" class="md-nav__link">
+    FICHEROS
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -410,6 +417,36 @@
     <li class="md-nav__item">
       <a href="../aplicaciones/" class="md-nav__link">
         Aplicaciones
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        Usuarios
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permisos/" class="md-nav__link">
+        Permisos
       </a>
     </li>
   
@@ -586,6 +623,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ficheros" class="md-nav__link">
+    FICHEROS
+  </a>
   
 </li>
       
@@ -1000,6 +1044,17 @@ Pero a partir del 10 hay que encerrarlo entre llaves, ej. ${11}</p>
 </tr>
 </tbody>
 </table>
+<hr>
+<hr>
+
+<h2 id="ficheros"><span class="ag-titulo">FICHEROS</span></h2>
+<p>La estructura de control correcta para la lectura de ficheros es el <strong><u>bucle while</u></strong>, siendo utilizado de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="c1"># read -r columna1 columna2 columna3 columnan</span>
+    <span class="k">do</span>  
+        <span class="c1"># Operaciones a realizar utilizando las variables: columna1, columna2, columna3.....  </span>
+
+    <span class="k">done</span> &lt; BD-usuarios.txt
+</code></pre></div>
 
               
             </article>
