@@ -301,6 +301,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#permisos-por-defecto" class="md-nav__link">
+     PERMISOS POR DEFECTO
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -347,6 +354,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#permisos-por-defecto" class="md-nav__link">
+     PERMISOS POR DEFECTO
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -363,6 +377,7 @@
 
   <h1>Permisos</h1>
 
+<p><center><img alt="permisos" src="../imagenes/permisos/permisos-caracter.png" /></center></p>
 <h2 id="cambio-permisos"><span class="ag-titulo">CAMBIO PERMISOS</span></h2>
 <p>Cambia el modo de acceso (permisos) de uno o más ficheros. Los ficheros pueden ser ordinarios o de directorios. Sólo el propietario o el superusuario pueden cambiar el permiso.
 <div class="highlight"><pre><span></span><code>    chmod <span class="m">777</span> -R directorio
@@ -377,6 +392,17 @@
     chown agustin:profesores fichero
 </code></pre></div></p>
 <hr>
+
+<h2 id="permisos-por-defecto"><span class="ag-titulo"> PERMISOS POR DEFECTO</span></h2>
+<p>Para conocer los permisos por defecto, al crear un fichero debemos utilizar el comando umask:</p>
+<div class="highlight"><pre><span></span><code>    <span class="nb">umask</span>
+    <span class="nb">umask</span> -S
+</code></pre></div>
+<hr>
+
+<hr>
+
+<p><center><img alt="permisos" src="../imagenes/permisos/permisos-descripcion.png" /></center></p>
 
               
             </article>
